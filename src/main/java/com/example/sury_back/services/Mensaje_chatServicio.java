@@ -30,7 +30,7 @@ public class Mensaje_chatServicio {
     return this.repositorio.findAll();
    }
 
-   public Mensaje_chat buscarUsuarioPorId(Integer id){
+   public Mensaje_chat buscarMensajeChatId(Integer id){
         Optional<Mensaje_chat> mensajechatbuscado = this.repositorio.findById(id);
             if(mensajechatbuscado.isPresent()){
                 return mensajechatbuscado.get();

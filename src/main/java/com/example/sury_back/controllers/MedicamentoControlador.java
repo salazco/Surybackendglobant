@@ -27,5 +27,10 @@ public class MedicamentoControlador {
     public ResponseEntity<?>buscar(){
         return ResponseEntity.status(HttpStatus.FOUND).body(servicio.buscarMedicamentos());
     }
+
+    @GetMapping ("/{id}")
+    public ResponseEntity<?> buscarPorid(Integer id){
+        return ResponseEntity.status(HttpStatus.FOUND).body(this.servicio.buscarMedicamentoPorId(id));
+    }
 }
     

@@ -29,7 +29,7 @@ public List<Medicamento>buscarMedicamentos(){
     return this.repositorio.findAll();
 }
 
-  public Medicamento buscarUsuarioPorId(Integer id){
+  public Medicamento buscarMedicamentoPorId(Integer id){
         Optional<Medicamento> medicamentoserviciobuscado = this.repositorio.findById(id);
             if(medicamentoserviciobuscado.isPresent()){
                 return medicamentoserviciobuscado.get();

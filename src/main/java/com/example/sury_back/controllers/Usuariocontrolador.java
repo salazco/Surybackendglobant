@@ -30,4 +30,10 @@ public class Usuariocontrolador {
     public ResponseEntity<?>buscar(){
         return ResponseEntity.status(HttpStatus.FOUND).body(servicio.buscarUsuarios());
     }
+
+    @GetMapping ("/{id}")
+    public ResponseEntity<?> buscarPorid(Integer id){
+        return ResponseEntity.status(HttpStatus.FOUND).body(this.servicio.buscarUsuarioPorId(id));
+    }
+
     }

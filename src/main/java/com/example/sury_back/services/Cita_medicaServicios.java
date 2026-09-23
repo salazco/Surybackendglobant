@@ -31,7 +31,7 @@ public class Cita_medicaServicios {
 
 
 
-    public Cita_medica buscarUsuarioPorId(Integer id){
+    public Cita_medica buscarCita_medicaPorId(Integer id){
         Optional<Cita_medica> citasmedicasBuscado = this.repositorio.findById(id);
             if(citasmedicasBuscado.isPresent()){
                 return citasmedicasBuscado.get();

@@ -28,4 +28,9 @@ public class ContactoemegerciaControlador {
     public ResponseEntity<?>buscar(){
         return ResponseEntity.status(HttpStatus.FOUND).body(servicio.buscarMedicamento_emergencia());
 }
+
+@GetMapping ("/{id}")
+    public ResponseEntity<?> buscarPorid(Integer id){
+        return ResponseEntity.status(HttpStatus.FOUND).body(this.servicio.buscarContacto_emergenciaPorid(id));
+    }
 }

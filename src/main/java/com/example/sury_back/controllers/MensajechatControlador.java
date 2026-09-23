@@ -28,4 +28,9 @@ public class MensajechatControlador {
     public ResponseEntity<?>buscar(){
         return ResponseEntity.status(HttpStatus.FOUND).body(servicio.BuscarMensaje_chat());
 }
+
+@GetMapping ("/{id}")
+    public ResponseEntity<?> buscarPorid(Integer id){
+        return ResponseEntity.status(HttpStatus.FOUND).body(this.servicio.buscarMensajeChatId(id));
+    }
 }

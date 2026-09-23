@@ -28,4 +28,9 @@ public class CitasmedicasControlador {
     public ResponseEntity<?>buscar(){
         return ResponseEntity.status(HttpStatus.FOUND).body(servicios.buscarCita_medicas());
 }
+
+@GetMapping ("/{id}")
+    public ResponseEntity<?> buscarPorid(Integer id){
+        return ResponseEntity.status(HttpStatus.FOUND).body(this.servicios.buscarCita_medicaPorId(id));
+    }
 }

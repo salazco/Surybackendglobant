@@ -29,7 +29,7 @@ public List<Contacto_emergencia>buscarMedicamento_emergencia(){
 }
 
 
-   public Contacto_emergencia buscarUsuarioPorId(Integer id){
+   public Contacto_emergencia buscarContacto_emergenciaPorid(Integer id){
         Optional<Contacto_emergencia> contactoemergenciabucado = this.repositorio.findById(id);
             if(contactoemergenciabucado.isPresent()){
                 return contactoemergenciabucado.get();
